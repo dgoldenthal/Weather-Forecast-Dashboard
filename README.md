@@ -1,51 +1,56 @@
-Weather Dashboard
+# Weather Dashboard
+
 A dynamic weather dashboard application that allows travelers to view current and future weather conditions for multiple cities to help plan their trips effectively.
-Description
+
+## Description
+
 This Weather Dashboard application uses the OpenWeather API to retrieve weather data for cities worldwide. Built with TypeScript, Express.js, and Vite, it features:
 
-Current weather conditions
-5-day weather forecast
-Search history functionality
-Dynamic weather icons
-Responsive design
-Temperature in Fahrenheit
-Wind speed and humidity data
+- Current weather conditions
+- 5-day weather forecast
+- Search history functionality
+- Dynamic weather icons
+- Responsive design
+- Temperature in Fahrenheit
+- Wind speed and humidity data
 
-Show Image
-Table of Contents
+![Weather Dashboard Screenshot](./assets/weather-dashboard.png)
 
-Installation
-Usage
-Features
-Technology Stack
-API Reference
-Environment Variables
-Contributing
-License
+## Table of Contents
 
-Installation
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [API Reference](#api-reference)
+- [Environment Variables](#environment-variables)
+- [Contributing](#contributing)
+- [License](#license)
 
-Clone the repository:
+## Installation
 
-bashCopygit clone https://github.com/yourusername/Weather-Forecast-Dashboard.git
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/Weather-Forecast-Dashboard.git
 
-Install dependencies for both client and server:
+2. Install dependencies for both client and server:
 
-bashCopynpm install
+npm install
 
-Create a .env file in the server directory:
+3. Create a .env file in the server directory:
 
-bashCopycd server
+cd server
 touch .env
 
-Add your OpenWeather API key to the .env file:
+4. Add your OpenWeather API key to the .env file:
 
-envCopyAPI_BASE_URL=https://api.openweathermap.org
+API_BASE_URL=https://api.openweathermap.org
 API_KEY=your_api_key_here
 
-Build and start the application:
+5. Build and start the application:
 
-bashCopynpm run start
+npm run start
+
 Usage
 
 Open your web browser and navigate to http://localhost:3001
@@ -106,8 +111,6 @@ APIs:
 OpenWeather API
 Geocoding API
 
-
-
 API Reference
 The application uses the following OpenWeather APIs:
 
@@ -147,5 +150,5 @@ Font Awesome for icons
 The educational team for the project requirements and guidance
 
 Contact
-Your Name - your-email@example.com
-Project Link: https://github.com/yourusername/Weather-Forecast-Dashboard
+Dov Goldenthal - dgoldenthal@gmail.com
+Project Link: https://github.com/dgoldenthal/Weather-Forecast-Dashboard
