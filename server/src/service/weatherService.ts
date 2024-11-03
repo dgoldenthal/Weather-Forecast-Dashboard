@@ -142,59 +142,78 @@ class WeatherService {
   private buildForecastArray(currentWeather: Weather, weatherData: WeatherData): Weather[] {
     const forecast: Weather[] = [];
     
-    // Create a map to store one forecast per day (using the noon forecast)
-    const dailyForecasts = new Map<string, typeof weatherData.list[0]>();
-    const today = new Date().toDateString();
-    
-    // Group forecasts by day, preferring ones closer to noon
-    weatherData.list.forEach(item => {
-      const date = new Date(item.dt * 1000);
-      const dateString = date.toDateString();
-      
-      // Skip today as we already have current weather
-      if (dateString === today) {
-        return;
-      }
-
-      const hours = date.getHours();
-      const currentForecast = dailyForecasts.get(dateString);
-      
-      // Prefer forecasts between 11 AM and 2 PM
-      if (!currentForecast || 
-          (hours >= 11 && hours <= 14 && 
-           Math.abs(12 - hours) < Math.abs(12 - new Date(currentForecast.dt * 1000).getHours()))) {
-        dailyForecasts.set(dateString, item);
-      }
-    });
-
     // Add current weather as first item
     forecast.push(currentWeather);
 
-    // Convert the map to an array and sort by date
-    const sortedForecasts = Array.from(dailyForecasts.entries())
-      .sort(([dateA], [dateB]) => new Date(dateA).getTime() - new Date(dateB).getTime())
-      .slice(0, 5); // Limit to 5 days
+    // Get current date at midnight for comparison
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
 
-    // Add each day's forecast to the array
-    sortedForecasts.forEach(([_, item]) => {
-      forecast.push({
-        city: currentWeather.city,
-        date: new Date(item.dt * 1000).toLocaleDateString(),
-        icon: item.weather[0].icon,
-        iconDescription: item.weather[0].description,
-        tempF: Math.round(item.main.temp),
-        windSpeed: Math.round(item.wind.speed),
-        humidity: item.main.humidity
-      });
+    // Create an array to store unique future days
+    const futureDays: Weather[] = [];
+    
+    // Process all time slots
+    weatherData.list.forEach(item => {
+        const forecastDate = new Date(item.dt * 1000);
+        forecastDate.setHours(0, 0, 0, 0);
+        
+        // Only process future days
+        if (forecastDate > today) {
+            // Check if we already have this date
+            const existingForecast = futureDays.find(f => 
+                new Date(f.date).toDateString() === forecastDate.toDateString()
+            );
+            
+            // If we don't have this date yet, or if this is a better time (closer to noon)
+            if (!existingForecast) {
+                futureDays.push({
+                    city: currentWeather.city,
+                    date: forecastDate.toLocaleDateString(),
+                    icon: item.weather[0].icon,
+                    iconDescription: item.weather[0].description,
+                    tempF: Math.round(item.main.temp),
+                    windSpeed: Math.round(item.wind.speed),
+                    humidity: item.main.humidity
+                });
+            } else {
+                // Check if this time is closer to noon (12:00)
+                const existingTime = new Date(existingForecast.date).getHours();
+                const newTime = forecastDate.getHours();
+                const existingDiffFromNoon = Math.abs(12 - existingTime);
+                const newDiffFromNoon = Math.abs(12 - newTime);
+                
+                if (newDiffFromNoon < existingDiffFromNoon) {
+                    // Replace with the forecast closer to noon
+                    const index = futureDays.indexOf(existingForecast);
+                    futureDays[index] = {
+                        city: currentWeather.city,
+                        date: forecastDate.toLocaleDateString(),
+                        icon: item.weather[0].icon,
+                        iconDescription: item.weather[0].description,
+                        tempF: Math.round(item.main.temp),
+                        windSpeed: Math.round(item.wind.speed),
+                        humidity: item.main.humidity
+                    };
+                }
+            }
+        }
     });
 
-    // Debug log
+    // Sort future days by date and take only the first 5
+    const sortedFutureDays = futureDays
+        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+        .slice(0, 5);
+
+    // Combine current weather with future days
+    forecast.push(...sortedFutureDays);
+
+    // Debug logging
     console.log(`Generated forecast for ${forecast.length} days`);
     forecast.forEach(f => console.log(`Date: ${f.date}, Temp: ${f.tempF}°F`));
 
     return forecast;
-  }
-
+}
+  
   async getWeatherForCity(city: string): Promise<Weather[]> {
     try {
       console.log(`Getting weather for city: ${city}`);
