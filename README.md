@@ -225,7 +225,7 @@ Note: The initial load may take a few seconds as the service spins up on Render'
 
 ### Common Issues and Solutions
 
-   API Key Issues
+   ### API Key Issues
    
    • Verify API key is set in .env
    
@@ -234,7 +234,7 @@ Note: The initial load may take a few seconds as the service spins up on Render'
    • Ensure key has correct permissions
    
 
-   Build Issues
+   ### Build Issues
    
    • Run npm install in root, client, and server directories
    
@@ -243,7 +243,7 @@ Note: The initial load may take a few seconds as the service spins up on Render'
    • Check TypeScript version compatibility
    
 
-   Deployment Issues
+   ### Deployment Issues
    
    • Verify all environment variables are set in Render
    
