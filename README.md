@@ -130,8 +130,10 @@ For more information, visit OpenWeather API Documentation
 ## Environment Variables
 
 Required environment variables in the server's .env file:
-API_BASE_URL=[https://api.openweathermap.org]
-API_KEY=2d6c6dd16cd2173821879b85ec204213
+
+API_BASE_URL= [https://api.openweathermap.org]
+
+API_KEY= "registered API key"
 
 ## Project Structure
 
@@ -156,23 +158,76 @@ Weather-Forecast-Dashboard/
     └── weather-dashboard.png  # Application screenshot
 ```
 
-## Contributing
+## Deployment
+
+The application is deployed on Render and can be accessed here:
+
+🌐 [https://weather-forecast-dashboard-4jc1.onrender.com/]
+
+Note: The initial load may take a few seconds as the service spins up on Render's free tier.
+
+## Contribution
+
+### Setup Development Environment
 
 1. Fork the repository
-
 2. Create your feature branch:
-   git checkout -b feature/AmazingFeature
+   git checkout -b feature/YourFeatureName
 
-3. Commit your changes:
-   git commit -m 'Add some AmazingFeature'
+### Coding Standards
 
-4. Push to the branch:
-   git push origin feature/AmazingFeature
+   - Use TypeScript for all new code
+   - Follow existing code formatting standards
+   - Add comments for complex logic
+   - Update documentation when necessary
 
-5. Open a Pull Request
+### Pull Request Guidelines
 
-## Contact
+   - Ensure all tests pass
+   - Update README.md if needed
+   - Add any new environment variables to both README and .env.example
+   - Reference any related issues in the PR description
 
-Dov Goldenthal: [dgoldenthal@gmail.com]
+## Notes
 
-Project Link: [https://github.com/dgoldenthal/Weather-Forecast-Dashboard]
+### API Limitations
+
+   - OpenWeather API has rate limits on the free tier
+   - Geocoding requests are limited by API key
+   - Weather data updates every 3 hours
+
+### Development Notes
+
+   - The server runs on port 3001 by default
+   - The development client runs on port 3000
+   - Environment variables must be set before starting the server
+   - API requests are logged in development mode
+
+## Troubleshooting
+
+## Common Issues and Solutions:
+
+### API Key Issues
+
+   - Verify API key is set in .env
+   - Check if API key is valid
+   - Ensure key has correct permissions
+
+### Build Issues
+
+   - Run npm install in root, client, and server directories
+   - Clear node_modules and reinstall if needed
+   - Check TypeScript version compatibility
+
+### Deployment Issues
+
+   - Verify all environment variables are set in Render
+   - Check build logs for errors
+   - Ensure start command is correct
+
+## Resources
+
+   - OpenWeather API Documentation
+   - TypeScript Documentation
+   - Express.js Guide
+   - Vite Documentation
