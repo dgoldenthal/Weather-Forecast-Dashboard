@@ -130,6 +130,7 @@ For more information, visit OpenWeather API Documentation
 ## Environment Variables
 
 Required environment variables in the server's .env file:
+
 API_BASE_URL=[https://api.openweathermap.org]
 API_KEY=2d6c6dd16cd2173821879b85ec204213
 
@@ -156,6 +157,13 @@ Weather-Forecast-Dashboard/
     └── weather-dashboard.png  # Application screenshot
 ```
 
+## Deployment
+
+The application is deployed on Render and can be accessed here:
+- 🌐 [Weather Dashboard](https://weather-forecast-dashboard-4jc1.onrender.com)
+
+Note: The initial load may take a few seconds as the service spins up on Render's free tier.
+
 ## Contributing
 
 1. Fork the repository
@@ -171,8 +179,5 @@ Weather-Forecast-Dashboard/
 
 5. Open a Pull Request
 
-## Contact
 
-Dov Goldenthal: [dgoldenthal@gmail.com]
 
-Project Link: [https://github.com/dgoldenthal/Weather-Forecast-Dashboard]
