@@ -131,21 +131,23 @@ For more information, visit OpenWeather API Documentation
 
 Required environment variables in the server's `.env` file:
 
-```env
 API_BASE_URL=https://api.openweathermap.org
+
+API_KEY=  "registered API key"
+
 
 
 ## Project Structure
 
-```
+```bash
 Weather-Forecast-Dashboard/
-├── client/               # Frontend application
-│   ├── src/              # Source files
-│   │   ├── main.ts       # Main TypeScript file
-│   │   └── styles/       # CSS styles
-│   ├── public/           # Public assets
-│   └── package.json      # Frontend dependencies
-├── server/               # Backend application
+├── client/                 # Frontend application
+│   ├── src/               # Source files
+│   │   ├── main.ts        # Main TypeScript file
+│   │   └── styles/        # CSS styles
+│   ├── public/            # Public assets
+│   └── package.json       # Frontend dependencies
+├── server/                # Backend application
 │   ├── src/              # Source files
 │   │   ├── routes/       # API routes
 │   │   ├── service/      # Weather service
@@ -156,7 +158,7 @@ Weather-Forecast-Dashboard/
 ├── package.json          # Root package.json
 └── assets/              # Project images and assets
     └── weather-dashboard.png  # Application screenshot
-```
+
 
 ## Deployment
 
@@ -165,12 +167,13 @@ The application is deployed on Render and can be accessed here:
 
 Note: The initial load may take a few seconds as the service spins up on Render's free tier.
 
+
 ## Contribution
 
 ### Setup Development Environment
 1. Fork the repository
 2. Create your feature branch:
-```bash
+
 git checkout -b feature/YourFeatureName
 
 Commit your changes:
@@ -183,59 +186,59 @@ bashCopygit push origin feature/YourFeatureName
 
 Open a Pull Request
 
-Coding Standards
+### Coding Standards
 
 Use TypeScript for all new code
 Follow existing code formatting standards
 Add comments for complex logic
 Update documentation when necessary
 
-Pull Request Guidelines
+### Pull Request Guidelines
 
 Ensure all tests pass
 Update README.md if needed
 Add any new environment variables to both README and .env.example
 Reference any related issues in the PR description
 
-Notes
+## Notes
 API Limitations
 
 OpenWeather API has rate limits on the free tier
 Geocoding requests are limited by API key
 Weather data updates every 3 hours
 
-Development Notes
+### Development Notes
 
 The server runs on port 3001 by default
 The development client runs on port 3000
 Environment variables must be set before starting the server
 API requests are logged in development mode
 
-Troubleshooting
+## Troubleshooting
 Common issues and solutions:
 
-API Key Issues
+### API Key Issues
 
 Verify API key is set in .env
 Check API key is valid
 Ensure key has correct permissions
 
 
-Build Issues
+### Build Issues
 
 Run npm install in root, client, and server directories
 Clear node_modules and reinstall if needed
 Check TypeScript version compatibility
 
 
-Deployment Issues
+### Deployment Issues
 
 Verify all environment variables are set in Render
 Check build logs for errors
 Ensure start command is correct
 
 
-Resources
+## Resources
 
 OpenWeather API Documentation
 TypeScript Documentation
