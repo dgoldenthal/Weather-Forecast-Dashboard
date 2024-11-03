@@ -1,31 +1,32 @@
-#Weather Dashboard
+# Weather Dashboard
 
 A dynamic weather dashboard application that allows travelers to view current and future weather conditions for multiple cities to help plan their trips effectively.
 
-##Description
+## Description
 
 This Weather Dashboard application uses the OpenWeather API to retrieve weather data for cities worldwide. Built with TypeScript, Express.js, and Vite, it features:
-•	Current weather conditions
-•	5-day weather forecast
-•	Search history functionality
-•	Dynamic weather icons
-•	Responsive design
-•	Temperature in Fahrenheit
-•	Wind speed and humidity data
+
+- Current weather conditions
+- 5-day weather forecast
+- Search history functionality
+- Dynamic weather icons
+- Responsive design
+- Temperature in Fahrenheit
+- Wind speed and humidity data
 Show Image
 
-##Table of Contents
+## Table of Contents
 
-•	Installation
-•	Usage
-•	Features
-•	Technology Stack
-•	API Reference
-•	Environment Variables
-•	Contributing
-•	License
+- Installation
+- Usage
+- Features
+- Technology Stack
+- API Reference
+- Environment Variables
+- Contributing
+- License
 
-##Installation
+## Installation
 
 1.	Clone the repository:
     git clone https://github.com/dgold2000/Weather-Forecast-Dashboard.git
@@ -55,7 +56,7 @@ API_KEY=your_api_key_here
 ```bash
 npm run start
 
-##Usage
+## Usage
 
 1.	Open your web browser and navigate to http://localhost:3001
 2.	Enter a city name in the search box
@@ -63,75 +64,73 @@ npm run start
 4.	Click on cities in the search history to view their weather again
 5.	Delete cities from search history using the trash icon
 
-##Features
+## Features
 
-•	Current Weather Display: 
+- Current Weather Display: 
+   o	City name and date
+   o	Weather condition icon
+   o	Temperature in Fahrenheit
+   o	Wind speed
+   o	Humidity percentage
 
-o	City name and date
-o	Weather condition icon
-o	Temperature in Fahrenheit
-o	Wind speed
-o	Humidity percentage
+- 5-Day Forecast: 
+   o	Date
+   o	Weather condition icon
+   o	Temperature in Fahrenheit
+   o	Wind speed
+   o	Humidity percentage
 
-•	5-Day Forecast: 
+- Search History: 
+   o	Persistent storage of searched cities
+   o	Quick access to previous searches
+   o	Ability to delete cities from history
+   o	Responsive design for mobile and desktop
 
-o	Date
-o	Weather condition icon
-o	Temperature in Fahrenheit
-o	Wind speed
-o	Humidity percentage
+## Technology Stack
 
-•	Search History: 
+- Frontend: 
+   o	TypeScript
+   o	HTML5
+   o	CSS3
+   o	Vite build tool
+   o	Day.js for date formatting
+   o	Bootstrap for styling
+   o	Font Awesome icons
 
-o	Persistent storage of searched cities
-o	Quick access to previous searches
-o	Ability to delete cities from history
-o	Responsive design for mobile and desktop
+- Backend: 
+   o	Node.js
+   o	Express.js
+   o	TypeScript
+   o	dotenv for environment variables
+   o	File-based storage for search history
 
-##Technology Stack
-
-•	Frontend: 
-o	TypeScript
-o	HTML5
-o	CSS3
-o	Vite build tool
-o	Day.js for date formatting
-o	Bootstrap for styling
-o	Font Awesome icons
-
-•	Backend: 
-o	Node.js
-o	Express.js
-o	TypeScript
-o	dotenv for environment variables
-o	File-based storage for search history
-
-•	APIs: 
-o	OpenWeather API for weather data
-o	OpenWeather Geocoding API for coordinates
+- APIs: 
+   o	OpenWeather API for weather data
+   o	OpenWeather Geocoding API for coordinates
 
 
 
-##API Reference
+## API Reference
 
 The application uses the following OpenWeather APIs:
-•	5 Day Weather Forecast API 
-o	Endpoint: /data/2.5/forecast
-o	Returns: 5-day forecast with 3-hour step data
+- 5 Day Weather Forecast API 
+   o	Endpoint: /data/2.5/forecast
+   o	Returns: 5-day forecast with 3-hour step data
 
-•	Geocoding API 
-o	Endpoint: /geo/1.0/direct
-o	Used for: Converting city names to coordinates
+- Geocoding API 
+   o	Endpoint: /geo/1.0/direct
+   o	Used for: Converting city names to coordinates
 
 For more information, visit OpenWeather API Documentation
 
-##Environment Variables
+## Environment Variables
 
 Required environment variables in the server's .env file:
+
 API_BASE_URL=https://api.openweathermap.org
 API_KEY=your_openweather_api_key
 
-##Project Structure
+## Project Structure
 ```
 Weather-Forecast-Dashboard/
 ├── client/                 # Frontend application
@@ -153,7 +152,7 @@ Weather-Forecast-Dashboard/
     └── weather-dashboard.png  # Application screenshot
 ```
 
-##Contributing
+## Contributing
 
 1.	Fork the repository
 
@@ -169,15 +168,8 @@ Weather-Forecast-Dashboard/
 5.	Open a Pull Request
 
 
-##Acknowledgments
+## Contact
 
-•	OpenWeather API for providing weather data
-•	Font Awesome for icons
-•	Bootstrap for styling components
-•	Day.js for date formatting
-•	The educational team for the project requirements and guidance
+Dov Goldenthal: dgoldenthal@gmail.com
 
-##Contact
-
-Dov Goldenthal - dgoldenthal@gmail.com
 Project Link: https://github.com/dgoldenthal/Weather-Forecast-Dashboard
