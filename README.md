@@ -138,15 +138,17 @@ API_KEY= "registered API key"
 
 ## Project Structure
 
+![Weather Dashboard Screenshot](assets/weather-dashboard.png)
+
 ```bash
 Weather-Forecast-Dashboard/
-├── client/               # Frontend application
-│   ├── src/              # Source files
-│   │   ├── main.ts       # Main TypeScript file
-│   │   └── styles/       # CSS styles
-│   ├── public/           # Public assets
-│   └── package.json      # Frontend dependencies
-├── server/               # Backend application
+├── client/                 # Frontend application
+│   ├── src/               # Source files
+│   │   ├── main.ts        # Main TypeScript file
+│   │   └── styles/        # CSS styles
+│   ├── public/            # Public assets
+│   └── package.json       # Frontend dependencies
+├── server/                # Backend application
 │   ├── src/              # Source files
 │   │   ├── routes/       # API routes
 │   │   ├── service/      # Weather service
@@ -155,9 +157,9 @@ Weather-Forecast-Dashboard/
 │   └── package.json      # Backend dependencies
 ├── README.md             # Project documentation
 ├── package.json          # Root package.json
-└── assets/               # Project images and assets
-    └── [weather-dashboard.png]  # Application screenshot
-```
+└── assets/              # Project images and assets
+    └── weather-dashboard.png  # Application screenshot
+
 
 ## Deployment
 
