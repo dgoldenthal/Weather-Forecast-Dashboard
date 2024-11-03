@@ -138,8 +138,6 @@ API_KEY= "registered API key"
 
 ## Project Structure
 
-![Weather Dashboard Screenshot](assets/weather-dashboard.png)
-
 ```bash
 Weather-Forecast-Dashboard/
 ├── client/                 # Frontend application
@@ -169,6 +167,10 @@ The application is deployed on Render and can be accessed here:
 🌐 [https://weather-forecast-dashboard-4jc1.onrender.com/]
 
 Note: The initial load may take a few seconds as the service spins up on Render's free tier.
+
+![Weather Dashboard Screenshot](assets/weather-dashboard.png)
+
+
 
 ## Contribution
 
