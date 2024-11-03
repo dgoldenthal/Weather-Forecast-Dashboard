@@ -56,7 +56,7 @@ Show Image
 
       API_BASE_URL= [https://api.openweathermap.org]
 
-      API_KEY= 2d6c6dd16cd2173821879b85ec204213
+      API_KEY=  "registered API key"
 
 5. Build and start the application:
 
@@ -129,10 +129,11 @@ For more information, visit OpenWeather API Documentation
 
 ## Environment Variables
 
-Required environment variables in the server's .env file:
+Required environment variables in the server's `.env` file:
 
-API_BASE_URL=[https://api.openweathermap.org]
-API_KEY=2d6c6dd16cd2173821879b85ec204213
+```env
+API_BASE_URL=https://api.openweathermap.org
+
 
 ## Project Structure
 
@@ -164,20 +165,80 @@ The application is deployed on Render and can be accessed here:
 
 Note: The initial load may take a few seconds as the service spins up on Render's free tier.
 
-## Contributing
+## Contribution
 
+### Setup Development Environment
 1. Fork the repository
-
 2. Create your feature branch:
-   git checkout -b feature/AmazingFeature
+```bash
+git checkout -b feature/YourFeatureName
 
-3. Commit your changes:
-   git commit -m 'Add some AmazingFeature'
+Commit your changes:
 
-4. Push to the branch:
-   git push origin feature/AmazingFeature
+bashCopygit commit -m 'Add YourFeatureName'
 
-5. Open a Pull Request
+Push to the branch:
+
+bashCopygit push origin feature/YourFeatureName
+
+Open a Pull Request
+
+Coding Standards
+
+Use TypeScript for all new code
+Follow existing code formatting standards
+Add comments for complex logic
+Update documentation when necessary
+
+Pull Request Guidelines
+
+Ensure all tests pass
+Update README.md if needed
+Add any new environment variables to both README and .env.example
+Reference any related issues in the PR description
+
+Notes
+API Limitations
+
+OpenWeather API has rate limits on the free tier
+Geocoding requests are limited by API key
+Weather data updates every 3 hours
+
+Development Notes
+
+The server runs on port 3001 by default
+The development client runs on port 3000
+Environment variables must be set before starting the server
+API requests are logged in development mode
+
+Troubleshooting
+Common issues and solutions:
+
+API Key Issues
+
+Verify API key is set in .env
+Check API key is valid
+Ensure key has correct permissions
 
 
+Build Issues
+
+Run npm install in root, client, and server directories
+Clear node_modules and reinstall if needed
+Check TypeScript version compatibility
+
+
+Deployment Issues
+
+Verify all environment variables are set in Render
+Check build logs for errors
+Ensure start command is correct
+
+
+Resources
+
+OpenWeather API Documentation
+TypeScript Documentation
+Express.js Guide
+Vite Documentation
 
