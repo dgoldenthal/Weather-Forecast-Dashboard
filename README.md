@@ -29,9 +29,11 @@ Show Image
 ## Installation
 
 1. Clone the repository:
-   git clone [https://github.com/dgoldenthal] Weather-Forecast-Dashboard.git
+
+   git clone [https://github.com/dgoldenthal/Weather-Forecast-Dashboard.git]
 
 2. Install dependencies for both client and server:
+
    npm install
    cd server
    npm install
@@ -45,15 +47,17 @@ Show Image
    touch .env
 
 4. Add your OpenWeather API key to the .env file:
+
 API_BASE_URL=[https://api.openweathermap.org]
-API_KEY=your_api_key_here
+API_KEY=2d6c6dd16cd2173821879b85ec204213
 
 5. Build and start the application:
+
 npm run start
 
 ## Usage
 
-1. Open your web browser and navigate to http://localhost:3001
+1. Open your web browser and navigate to [http://localhost:3001]
 2. Enter a city name in the search box
 3. View current weather and 5-day forecast
 4. Click on cities in the search history to view their weather again
@@ -62,57 +66,57 @@ npm run start
 ## Features
 
 - Current Weather Display:
-   o City name and date
-   o Weather condition icon
-   o Temperature in Fahrenheit
-   o Wind speed
-   o Humidity percentage
+   - City name and date
+   - Weather condition icon
+   - Temperature in Fahrenheit
+   - Wind speed
+   - Humidity percentage
 
 - 5-Day Forecast:
-   o Date
-   o Weather condition icon
-   o Temperature in Fahrenheit
-   o Wind speed
-   o Humidity percentage
+   - Date
+   - Weather condition icon
+   - Temperature in Fahrenheit
+   - Wind speed
+   - Humidity percentage
 
 - Search History:
-   o Persistent storage of searched cities
-   o Quick access to previous searches
-   o Ability to delete cities from history
-   o Responsive design for mobile and desktop
+   - Persistent storage of searched cities
+   - Quick access to previous searches
+   - Ability to delete cities from history
+   - Responsive design for mobile and desktop
 
 ## Technology Stack
 
 - Frontend:
-   o TypeScript
-   o HTML5
-   o CSS3
-   o Vite build tool
-   o Day.js for date formatting
-   o Bootstrap for styling
-   o Font Awesome icons
+   - TypeScript
+   - HTML5
+   - CSS3
+   - Vite build tool
+   - Day.js for date formatting
+   - Bootstrap for styling
+   - Font Awesome icons
 
 - Backend:
-   o Node.js
-   o Express.js
-   o TypeScript
-   o dotenv for environment variables
-   o File-based storage for search history
+   - Node.js
+   - Express.js
+   - TypeScript
+   - dotenv for environment variables
+   - File-based storage for search history
 
 - APIs:
-   o OpenWeather API for weather data
-   o OpenWeather Geocoding API for coordinates
+   - OpenWeather API for weather data
+   - OpenWeather Geocoding API for coordinates
 
 ## API Reference
 
 - The application uses the following OpenWeather APIs:
-   o 5 Day Weather Forecast API
-   o Endpoint: /data/2.5/forecast
-   o Returns: 5-day forecast with 3-hour step data
+   - 5 Day Weather Forecast API
+   - Endpoint: /data/2.5/forecast
+   - Returns: 5-day forecast with 3-hour step data
 
 - Geocoding API
-   o Endpoint: /geo/1.0/direct
-   o Used for: Converting city names to coordinates
+   - Endpoint: /geo/1.0/direct
+   - Used for: Converting city names to coordinates
 
 For more information, visit OpenWeather API Documentation
 
@@ -124,14 +128,15 @@ API_KEY=2d6c6dd16cd2173821879b85ec204213
 
 ## Project Structure
 
+```
 Weather-Forecast-Dashboard/
-├── client/                 # Frontend application
-│   ├── src/               # Source files
-│   │   ├── main.ts        # Main TypeScript file
-│   │   └── styles/        # CSS styles
-│   ├── public/            # Public assets
-│   └── package.json       # Frontend dependencies
-├── server/                # Backend application
+├── client/               # Frontend application
+│   ├── src/              # Source files
+│   │   ├── main.ts       # Main TypeScript file
+│   │   └── styles/       # CSS styles
+│   ├── public/           # Public assets
+│   └── package.json      # Frontend dependencies
+├── server/               # Backend application
 │   ├── src/              # Source files
 │   │   ├── routes/       # API routes
 │   │   ├── service/      # Weather service
@@ -142,6 +147,7 @@ Weather-Forecast-Dashboard/
 ├── package.json          # Root package.json
 └── assets/              # Project images and assets
     └── weather-dashboard.png  # Application screenshot
+```
 
 ## Contributing
 
