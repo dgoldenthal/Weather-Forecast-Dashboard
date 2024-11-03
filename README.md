@@ -159,6 +159,7 @@ Weather-Forecast-Dashboard/
 ├── package.json          # Root package.json
 └── assets/              # Project images and assets
     └── weather-dashboard.png  # Application screenshot
+```
 
 
 ## Deployment
