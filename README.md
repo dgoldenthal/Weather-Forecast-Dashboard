@@ -30,30 +30,30 @@ Show Image
 
 1. Clone the repository:
 
-   git clone [https://github.com/dgoldenthal/Weather-Forecast-Dashboard.git]
+      git clone [https://github.com/dgoldenthal/Weather-Forecast-Dashboard.git]
 
 2. Install dependencies for both client and server:
 
-   npm install
-   cd server
-   npm install
-   cd ../client
-   npm install
-   cd ..
+      npm install
+      cd server
+      npm install
+      cd ../client
+      npm install
+      cd ..
 
 3. Create a .env file in the server directory:
   
-   cd server
-   touch .env
+      cd server
+      touch .env
 
 4. Add your OpenWeather API key to the .env file:
 
-API_BASE_URL=[https://api.openweathermap.org]
-API_KEY=2d6c6dd16cd2173821879b85ec204213
+      API_BASE_URL= [https://api.openweathermap.org]
+      API_KEY= 2d6c6dd16cd2173821879b85ec204213
 
 5. Build and start the application:
 
-npm run start
+      npm run start
 
 ## Usage
 
