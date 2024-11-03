@@ -1,10 +1,12 @@
 # Weather Dashboard
 
-A dynamic weather dashboard application that allows travelers to view current and future weather conditions for multiple cities to help plan their trips effectively.
+A dynamic weather dashboard application that allows travelers to view current and 
+future weather conditions for multiple cities to help plan their trips effectively.
 
 ## Description
 
-This Weather Dashboard application uses the OpenWeather API to retrieve weather data for cities worldwide. Built with TypeScript, Express.js, and Vite, it features:
+This Weather Dashboard application uses the OpenWeather API to retrieve weather data for cities worldwide. 
+Built with TypeScript, Express.js, and Vite, it features:
 
 - Current weather conditions
 - 5-day weather forecast
@@ -33,122 +35,134 @@ This Weather Dashboard application uses the OpenWeather API to retrieve weather 
 ```bash
 git clone https://github.com/yourusername/Weather-Forecast-Dashboard.git
 
-2. Install dependencies for both client and server:
-
+2.	Install dependencies for both client and server:
+```bash
 npm install
+cd server
+npm install
+cd ../client
+npm install
+cd ..
 
-3. Create a .env file in the server directory:
 
+3.	Create a .env file in the server directory:
+```bash
 cd server
 touch .env
 
-4. Add your OpenWeather API key to the .env file:
-
+4.	Add your OpenWeather API key to the .env file:
+```bash
 API_BASE_URL=https://api.openweathermap.org
 API_KEY=your_api_key_here
 
-5. Build and start the application:
-
+5.	Build and start the application:
+```bash
 npm run start
 
-Usage
+### Usage
+1.	Open your web browser and navigate to http://localhost:3001
+2.	Enter a city name in the search box
+3.	View current weather and 5-day forecast
+4.	Click on cities in the search history to view their weather again
+5.	Delete cities from search history using the trash icon
 
-Open your web browser and navigate to http://localhost:3001
-Enter a city name in the search box
-View current weather and 5-day forecast
-Click on cities in the search history to view their weather again
-Delete cities from search history using the trash icon
+### Features
 
-Features
+•	Current Weather Display:
+      o	City name and date
+      o	Weather condition icon
+      o	Temperature in Fahrenheit
+      o	Wind speed
+      o	Humidity percentage
 
-Current Weather Display:
+•	5-Day Forecast:
+      o	Date
+      o	Weather condition icon
+      o	Temperature in Fahrenheit
+      o	Wind speed
+      o	Humidity percentage
 
-City name and date
-Weather condition icon
-Temperature
-Wind speed
-Humidity
+•	Search History:
+      o	Persistent storage of searched cities
+      o	Quick access to previous searches
+      o	Ability to delete cities from history
+      o	Responsive design for mobile and desktop
 
+### Technology Stack
 
-5-Day Forecast:
+•	Frontend: 
+      o	TypeScript
+      o	HTML5
+      o	CSS3
+      o	Vite build tool
+      o	Day.js for date formatting
+      o	Bootstrap for styling
+      o	Font Awesome icons
 
-Date
-Weather condition icon
-Temperature
-Wind speed
-Humidity
+•	Backend: 
+      o	Node.js
+      o	Express.js
+      o	TypeScript
+      o	dotenv for environment variables
+      o	File-based storage for search history
 
+•	APIs: 
+      o	OpenWeather API for weather data
+      o	OpenWeather Geocoding API for coordinates
 
-Search History:
+### API Reference
 
-Persistent storage of searched cities
-Quick access to previous searches
-Ability to delete cities from history
-
-
-
-Technology Stack
-
-Frontend:
-
-TypeScript
-HTML5
-CSS3
-Vite
-Day.js for date formatting
-
-
-Backend:
-
-Node.js
-Express.js
-TypeScript
-dotenv for environment variables
-
-
-APIs:
-
-OpenWeather API
-Geocoding API
-
-API Reference
 The application uses the following OpenWeather APIs:
+•	5 Day Weather Forecast API 
+      o	Endpoint: /data/2.5/forecast
+      o	Returns: 5-day forecast with 3-hour step data
 
-5 Day Weather Forecast API
-Geocoding API
+•	Geocoding API 
+      o	Endpoint: /geo/1.0/direct
+      o	Used for: Converting city names to coordinates
 
 For more information, visit OpenWeather API Documentation
-Environment Variables
+
+### Environment Variables
+
 Required environment variables in the server's .env file:
-envCopyAPI_BASE_URL=https://api.openweathermap.org
+API_BASE_URL=https://api.openweathermap.org
 API_KEY=your_openweather_api_key
-Project Structure
-CopyWeather-Forecast-Dashboard/
+
+### Project Structure
+
+Weather-Forecast-Dashboard/
 ├── client/                 # Frontend application
 │   ├── src/               # Source files
+│   │   ├── main.ts        # Main TypeScript file
+│   │   └── styles/        # CSS styles
 │   ├── public/            # Public assets
 │   └── package.json       # Frontend dependencies
 ├── server/                # Backend application
 │   ├── src/              # Source files
+│   │   ├── routes/       # API routes
+│   │   ├── service/      # Weather service
+│   │   └── server.ts     # Server configuration
 │   ├── db/               # Database files
 │   └── package.json      # Backend dependencies
-└── package.json          # Root package.json
-Contributing
+├── README.md             # Project documentation
+├── package.json          # Root package.json
+└── assets/              # Project images and assets
+    └── weather-dashboard.png  # Application screenshot
 
-Fork the repository
-Create your feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
+### Contributing
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
-Acknowledgments
+1.	Fork the repository
+2.	Create your feature branch:
+    git checkout -b feature/AmazingFeature
+3.	Commit your changes:
+    git commit -m 'Add some AmazingFeature'
+4.	Push to the branch:
+    git push origin feature/AmazingFeature
+5.	Open a Pull Request
 
-OpenWeather API for weather data
-Font Awesome for icons
-The educational team for the project requirements and guidance
 
-Contact
+### Contact
+
 Dov Goldenthal - dgoldenthal@gmail.com
 Project Link: https://github.com/dgoldenthal/Weather-Forecast-Dashboard
